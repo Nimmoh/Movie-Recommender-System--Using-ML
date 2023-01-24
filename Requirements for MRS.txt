@@ -1,16 +1,26 @@
-Content based Recommendation system using Machine Learning
+#step by step implementation for Movie Recommendation system
+Get the Dataset:
+The first step to build a movie recommendation system is getting the appropriate data. I am going to use the tmdb movie dataset that consists of two files, tmdb_5000_credits.csv and tmdb_5000_movies.csv that I downloaded from kaggle website: (https://www.kaggle.com/tmdb/tmdb-movie-metadata.)
 
-Movie Recommendation Engine
+Importing libraries:
+let’s import the libraries we need, as well as the CSV file of the movies’ dataset.
+I’ll use Python Pandas and Numpy to implement recommendations of movie items to the user.
 
-Dataset Information:
-I am going to use the tmdb movie dataset that consists of two files, tmdb_5000_credits.csv and tmdb_5000_movies.csv that I downloaded from kaggle website: https://www.kaggle.com/tmdb/tmdb-movie-metadata.
+Features List: my chosen features will be movie_id, title,overview, genres, keywords, cast, crew. data preprocessing and replacing any rows having NaN values with a space/empty string, so it does not generate an error while running the code.
 
-Libraries:
-pandas
-Numpy
-sklearn
-requests
+Extracting Features:
+The sklearn.feature_extraction module can be used to extract features in a format supported by machine learning algorithms from datasets consisting of formats such as text and image.
 
-Algorithms:
-Content-Based filtering
+Using the Cosine Similarity:
+I will use the Cosine Similarity from Sklearn, as the metric to compute the similarity between two movies.
+similarity = cosine_similarity(vector)
+
+Content User likes: 
+The next step is to take as input a movie that the user likes. Since we are building a content based filtering system, we need to know the users’ likes in order to predict a similar item
+
+Recommend movie:
+the user recommends a movie similar to the previuosly watched by selectiong on the dropdown list.
+
+Making recommendations to the user:
+Finally the System recommends the movie selected by user and shows other recommendations of similar movies to the selected one.
 
